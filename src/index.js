@@ -1,14 +1,17 @@
 import React from "react";
-import  ReactDOM from "react-dom/client";
-import { GifExperApp } from "./GifExperApp";
-import './styles.css'
+import ReactDOM from "react-dom/client";
+import { FirstApp } from "./componentes/FirstApp";
+import { BrowserRouter } from 'react-router-dom';
+import { GetPokemon } from "./componentes/GetPokemon";
+import "./styles.css";
+import { AppRouter } from "./router/AppRouter";
 
 
-
-
-
-ReactDOM.createRoot( document.getElementById('root')).render(
-    //  <React.StrictMode>
-       <GifExperApp />
-     // </React.StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter >
+      <AppRouter>
+      <FirstApp />
+    <GetPokemon />
+    </AppRouter>
+</BrowserRouter>
 );

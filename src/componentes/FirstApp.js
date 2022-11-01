@@ -1,28 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { CheckList } from './CheckList';
 
-// const tecnologies = [ 'HTML5', 'CSS3', 'JavaScript', 'ReactJs',  ];
 const description = {
     name: 'Matias',
     age: '31',
     country: 'Argentina'
-
 }
 
-export const FirstApp = ({title, age}) => {
+
+const backgoroundColor = {
+    className: 'green-background',
+}
+
+export const FirstApp = ({title}) => {
     
 
   return (
-    <>
-    <h1>{ title }</h1>
-    <p>tecnologies: </p>
-    <h2>Description</h2>
-    <ul>
+    <div>
+    <h1 className={backgoroundColor.className}>{ title }</h1>
+    <Link to='/getpokemon'>get pokemon!</Link>
+    <br></br>
+    <hr></hr>
+    <br></br>
+    <h2>Technologies:</h2>
+    <CheckList />
+    <h2 className={backgoroundColor.className}>Description</h2>
+    <ul >
         <li>Name: { description.name }</li>
-        <li>Age: { age }</li>
-        <li>COuntry: { description.country }</li>
+        <li>Age: { description.age }</li>
+        <li>Country: { description.country }</li>
     </ul>
-    </>
+    </div>
   )
 }
 
@@ -31,5 +41,5 @@ FirstApp.propTypes = {
 }
 
 FirstApp.defaultProps = {
-    title: 33,
+    title: 'App React js',
 }

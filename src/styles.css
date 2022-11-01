@@ -4,7 +4,11 @@ body {
     font-size: 1.3 rem;
     color: aliceblue;
 }
+a {
+text-decoration: none;
+color: aqua;
 
+}
 button {
     padding: 5px;
     width: 10%;
@@ -31,4 +35,10 @@ button {
     justify-content: center;
     margin: 0px 20px;
     overflow: hidden;
+}
+
+.green-background {
+    background-color: rgba(66, 175, 68, 0.878);
+    border-radius: 3px;
+    text-align: center;
 }
